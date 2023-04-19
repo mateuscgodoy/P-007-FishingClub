@@ -1,6 +1,8 @@
 /* Core Settings */
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Montserrat:wght@200;400;700&display=swap');
+
 html {
-    font-family: sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 22px;
     color: yellow;
 }
@@ -11,19 +13,27 @@ img {
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 4rem;
+    font-family: 'Karla',
+        sans-serif;
 }
 
 h2 {
-    font-size: 2.4rem;
+    font-size: 3rem;
+    font-family: 'Karla',
+        sans-serif;
 }
 
 h3 {
-    font-size: 1.75rem;
+    font-size: 2.5rem;
+    font-family: 'Karla',
+        sans-serif;
 }
 
 h5 {
     font-size: 0.75rem;
+    font-family: 'Karla',
+        sans-serif;
 }
 
 main {
@@ -34,8 +44,9 @@ main {
 }
 
 body {
-    background-color: #2a2a72;
-    background-image: linear-gradient(0deg, #2a2a72 0%, #009ffd 74%);
+    /* background-color: #9bb1f7; */
+    background-image: linear-gradient(0deg, #424297 0%, #009ffd 74%);
+    /* background-image: linear-gradient(0deg, #2a2a72 0%, #009ffd 74%); */
 }
 
 /* Header Section */
@@ -45,7 +56,7 @@ header {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    padding-top: 1.5em;
+    padding-top: 3.5em;
     border-bottom: 2px solid rgba(0, 0, 139, 0.327);
 }
 
@@ -57,7 +68,6 @@ header {
     align-content: space-between;
     justify-content: space-between;
     align-items: center;
-
 }
 
 #title {
@@ -73,18 +83,26 @@ header {
 #title h1 {
     text-transform: uppercase;
     color: yellow;
-    text-shadow: 0.25rem 0.25rem 0.25rem rgba(59, 59, 240, 0.573);
+    /* text-shadow: 0.25rem 0.25rem 0.25rem rgba(59, 59, 240, 0.573); */
+    text-shadow: 5px 5px 5px rgba(0, 0, 59, 0.75);
     letter-spacing: 0.25rem;
+    line-height: 4rem;
+}
+
+.item-one {
+    padding-right: 7rem;
 }
 
 #title img {
     width: 5em;
     height: 5em;
+    opacity: 0.55;
 }
 
 #title p {
     font-weight: bold;
     word-spacing: 0.35rem;
+    padding-top: 1rem;
 }
 
 nav {
@@ -122,7 +140,7 @@ nav {
 #about-us {
     width: 80%;
     margin: 0 auto;
-    height: 28em;
+    height: 32em;
     margin-top: 2rem;
     position: relative;
 }
@@ -134,15 +152,16 @@ nav {
 }
 
 .h2-list li {
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
     color: yellow;
+    text-shadow: 5px 5px 5px rgba(0, 0, 59, 0.75);
 }
 
-#item-two {
+.item-two {
     padding-left: 3.5rem;
 }
 
-#item-three {
+.item-three {
     padding-left: 7rem;
 }
 
@@ -152,8 +171,20 @@ nav {
     border-radius: 0.25rem;
 }
 
+#member-posts:hover .highlight-effect,
+#about-us:hover .highlight-effect,
+.partner-div:hover .highlight-effect {
+    color: #fff;
+    background-color: rgb(0, 0, 59);
+    font-size: 1.2rem;
+    transition: color 4s;
+    transition: background-color 4s;
+    transition: font-size 4s;
+    border-radius: 0.25rem;
+}
+
 #about-us p {
-    background-color: rgba(0, 0, 0, 0.317);
+    background-color: rgba(0, 0, 59, 0.75);
     color: yellow;
     text-align: center;
     position: relative;
@@ -170,14 +201,15 @@ nav {
 
 #member-posts {
     position: relative;
-    height: 28em;
+    height: 32em;
     margin: 2em 0;
 }
 
 #member-posts img {
     position: absolute;
-    left: 2%;
-    height: 100%;
+    left: 5%;
+    top: 12%;
+    height: 75%;
     width: auto;
     border-radius: 0.25rem;
     z-index: 10;
@@ -209,8 +241,16 @@ nav {
 .posts-ul p,
 .posts-ul h5 {
     max-width: 50%;
-    line-height: 1.5;
+    line-height: 1.6;
     font-weight: bold;
+}
+
+.posts-ul p {
+    font-size: 0.75rem;
+}
+
+.posts-ul h5 {
+    padding-right: 2rem;
 }
 
 /* Monthly Highlights Section */
@@ -240,16 +280,14 @@ nav {
     line-height: 1.5;
     justify-content: space-evenly;
     padding: 2rem 0;
+    text-shadow: 5px 5px 5px rgba(0, 0, 59, 0.75);
 }
 
 .highlight-ul img {
     height: 10em;
     width: auto;
     border-radius: 0.25rem;
-}
-
-.test-div {
-    flex-shrink: 1;
+    box-shadow: 5px 5px 5px rgba(0, 0, 59, 0.75);
 }
 
 .highlight-ul p {
@@ -263,14 +301,20 @@ nav {
     width: 80%;
     margin: 0 auto;
     padding: 2em 0;
+    text-shadow: 5px 5px 5px rgba(0, 0, 59, 0.75);
 }
 
 #partners h2 {
     padding-bottom: 2.5rem;
+    text-shadow: 5px 5px 5px rgba(0, 0, 59, 0.75);
 }
 
 #partners h3 {
     padding-bottom: 1.5rem;
+}
+
+#partners p {
+    line-height: 1.5;
 }
 
 .partner-div {
@@ -334,9 +378,13 @@ footer a {
 
 @media only screen and (min-width: 1000px) {
 
+    h2 {
+        font-size: 3.5rem;
+    }
+
     #about-us {
         width: 60%;
-        height: 42em;
+        height: 47em;
     }
 
     #about-us p {
@@ -345,8 +393,22 @@ footer a {
         left: 40%;
     }
 
+    .h2-list {
+        position: absolute;
+        top: 5%;
+        left: 5%;
+    }
+
+    .posts-ul p {
+        font-size: 1rem;
+    }
+
+    #member-posts {
+        height: 40em;
+    }
+
     #member-posts img {
-        left: 25%;
+        left: 10%;
     }
 
     .highlight-ul li {
