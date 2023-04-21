@@ -3,7 +3,7 @@
 
 html {
     font-family: 'Montserrat', sans-serif;
-    font-size: 22px;
+    font-size: 19px;
     color: yellow;
 }
 
@@ -44,9 +44,7 @@ main {
 }
 
 body {
-    /* background-color: #9bb1f7; */
     background-image: linear-gradient(0deg, #424297 0%, #009ffd 74%);
-    /* background-image: linear-gradient(0deg, #2a2a72 0%, #009ffd 74%); */
 }
 
 /* Header Section */
@@ -83,7 +81,6 @@ header {
 #title h1 {
     text-transform: uppercase;
     color: yellow;
-    /* text-shadow: 0.25rem 0.25rem 0.25rem rgba(59, 59, 240, 0.573); */
     text-shadow: 5px 5px 5px rgba(0, 0, 59, 0.75);
     letter-spacing: 0.25rem;
     line-height: 4rem;
@@ -111,6 +108,7 @@ nav {
 
 .nav-ul {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     justify-content: space-evenly;
     align-items: flex-end;
@@ -171,18 +169,6 @@ nav {
     border-radius: 0.25rem;
 }
 
-#member-posts:hover .highlight-effect,
-#about-us:hover .highlight-effect,
-.partner-div:hover .highlight-effect {
-    color: #fff;
-    background-color: rgb(0, 0, 59);
-    font-size: 1.2rem;
-    transition: color 4s;
-    transition: background-color 4s;
-    transition: font-size 4s;
-    border-radius: 0.25rem;
-}
-
 #about-us p {
     background-color: rgba(0, 0, 59, 0.75);
     color: yellow;
@@ -228,7 +214,7 @@ nav {
 
 .posts-ul li {
     background-color: rgb(2, 0, 36);
-    background-color: linear-gradient(0deg, rgba(2, 0, 36, 1) 62%, rgba(9, 9, 121, 1) 87%, rgba(40, 67, 164, 1) 95%, rgba(101, 184, 249, 1) 100%);
+    /* background-color: linear-gradient(0deg, rgba(2, 0, 36, 1) 62%, rgba(9, 9, 121, 1) 87%, rgba(40, 67, 164, 1) 95%, rgba(101, 184, 249, 1) 100%); */
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -332,12 +318,6 @@ nav {
     height: 5em;
 }
 
-.partner-div:hover img {
-    width: 6.5em;
-    height: auto;
-    transition: width 2s;
-}
-
 /* Footer Section */
 footer {
     max-width: 80%;
@@ -375,8 +355,158 @@ footer a {
 }
 
 /* Queries Section */
+@media only screen and (max-width: 800px) {
+    h1 {
+        font-size: 2.75rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    footer ul {
+        flex-wrap: wrap;
+        align-content: space-around;
+    }
+
+    .nav-ul {
+        justify-content: space-around;
+        align-items: flex-end;
+    }
+
+    .nav-ul img {
+        padding: 0.25em 0.25em;
+    }
+
+    .land-img {
+        width: 9em;
+    }
+
+    .port-img {
+        width: 6em;
+    }
+
+    #about-us {
+        width: 100%;
+        height: auto;
+    }
+
+    #about-us img {
+        border-radius: 0;
+    }
+
+    #about-us p {
+        position: static;
+        margin: 0 auto;
+        line-height: 1.8;
+    }
+
+    #member-posts {
+        position: static;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #member-posts img {
+        position: static;
+        max-width: 50%;
+        margin: 0 auto;
+    }
+
+    #member-posts {
+        height: auto;
+    }
+
+    .posts-ul {
+        position: static;
+        justify-content: center;
+    }
+
+    .posts-ul li {
+        align-items: center;
+        justify-content: space-between;
+        align-content: space-between;
+        text-align: center;
+
+    }
+
+    .posts-ul p {
+        font-size: 1rem;
+        padding-bottom: 1.5em;
+    }
+
+    .posts-ul h5 {
+        font-size: 0.75rem;
+        padding: 0;
+    }
+
+    .posts-ul p,
+    .posts-ul h5 {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .nav-ul img {
+        opacity: 1;
+    }
+
+    .partner-div {
+        flex-direction: column;
+    }
+
+    .partner-div div {
+        margin: 0 auto;
+    }
+
+    .partner-div h3 {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .highlight-effect {
+        color: #fff;
+        background-color: rgb(0, 0, 59);
+        font-size: 1.2rem;
+        border-radius: 0.25rem;
+    }
+
+    .partner-div img {
+        width: 7em;
+        height: 7em;
+        padding-bottom: 1.5em;
+    }
+}
+
+@media only screen and (min-width: 801px) {
+
+    html {
+        font-size: 20px;
+    }
+
+    #member-posts:hover .highlight-effect,
+    #about-us:hover .highlight-effect,
+    .partner-div:hover .highlight-effect {
+        color: #fff;
+        background-color: rgb(0, 0, 59);
+        font-size: 1.2rem;
+        transition: color 4s;
+        transition: background-color 4s;
+        transition: font-size 4s;
+        border-radius: 0.25rem;
+    }
+
+    .partner-div:hover img {
+        width: 6.5em;
+        height: auto;
+        transition: width 2s;
+    }
+}
 
 @media only screen and (min-width: 1000px) {
+
+    html {
+        font-size: 22px;
+    }
 
     h2 {
         font-size: 3.5rem;
@@ -384,7 +514,7 @@ footer a {
 
     #about-us {
         width: 60%;
-        height: 47em;
+        height: 45em;
     }
 
     #about-us p {
@@ -420,22 +550,34 @@ footer a {
         max-width: 50%;
     }
 
+    .highlight-ul div {
+        margin-left: 2rem;
+    }
+
+    .partner-div {
+        flex-direction: row;
+    }
+
+    .highlight-effect {
+        color: yellow;
+        background-color: transparent;
+        font-size: 1rem;
+        border-radius: 0.25rem;
+    }
+
+}
+
+@media only screen and (min-width: 1890px) {
+    html {
+        font-size: 28px;
+    }
+
     #monthly-highlights {
         width: 50%;
     }
 
     #partners {
         width: 50%
-    }
-
-    .highlight-ul div {
-        margin-left: 2rem;
-    }
-}
-
-@media only screen and (min-width: 1951px) {
-    html {
-        font-size: 28px;
     }
 
     header {
